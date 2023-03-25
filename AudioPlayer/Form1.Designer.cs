@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             openFileBtn = new Button();
             pictureBoxAlbum = new PictureBox();
             rewindBtn = new Button();
@@ -37,6 +38,7 @@
             stopBtn = new Button();
             songTitleLabel = new Label();
             progressBar = new ProgressBar();
+            exitBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAlbum).BeginInit();
             SuspendLayout();
             // 
@@ -54,6 +56,8 @@
             // 
             // pictureBoxAlbum
             // 
+            pictureBoxAlbum.BackgroundImage = (Image)resources.GetObject("pictureBoxAlbum.BackgroundImage");
+            pictureBoxAlbum.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBoxAlbum.Location = new Point(41, 253);
             pictureBoxAlbum.MaximumSize = new Size(240, 240);
             pictureBoxAlbum.MinimumSize = new Size(240, 240);
@@ -72,6 +76,7 @@
             rewindBtn.TabIndex = 2;
             rewindBtn.Text = "<<";
             rewindBtn.UseVisualStyleBackColor = false;
+            rewindBtn.Click += rewindBtn_Click;
             // 
             // pauseBtn
             // 
@@ -83,6 +88,7 @@
             pauseBtn.TabIndex = 3;
             pauseBtn.Text = "||";
             pauseBtn.UseVisualStyleBackColor = false;
+            pauseBtn.Click += pauseBtn_Click;
             // 
             // playBtn
             // 
@@ -94,6 +100,7 @@
             playBtn.TabIndex = 4;
             playBtn.Text = "▶";
             playBtn.UseVisualStyleBackColor = false;
+            playBtn.Click += playBtn_Click;
             // 
             // fastForwardBtn
             // 
@@ -105,6 +112,7 @@
             fastForwardBtn.TabIndex = 5;
             fastForwardBtn.Text = ">>";
             fastForwardBtn.UseVisualStyleBackColor = false;
+            fastForwardBtn.Click += fastForwardBtn_Click;
             // 
             // stopBtn
             // 
@@ -116,13 +124,14 @@
             stopBtn.TabIndex = 6;
             stopBtn.Text = "◼️";
             stopBtn.UseVisualStyleBackColor = false;
+            stopBtn.Click += stopBtn_Click;
             // 
             // songTitleLabel
             // 
             songTitleLabel.AutoSize = true;
             songTitleLabel.BackColor = Color.Transparent;
             songTitleLabel.Font = new Font("Consolas", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            songTitleLabel.Location = new Point(362, 253);
+            songTitleLabel.Location = new Point(362, 376);
             songTitleLabel.Name = "songTitleLabel";
             songTitleLabel.Size = new Size(0, 27);
             songTitleLabel.TabIndex = 7;
@@ -134,12 +143,27 @@
             progressBar.Size = new Size(759, 17);
             progressBar.TabIndex = 8;
             // 
+            // exitBtn
+            // 
+            exitBtn.BackColor = SystemColors.ControlLight;
+            exitBtn.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            exitBtn.Location = new Point(974, 138);
+            exitBtn.Name = "exitBtn";
+            exitBtn.Size = new Size(240, 59);
+            exitBtn.TabIndex = 9;
+            exitBtn.Text = "❌ Exit Application";
+            exitBtn.UseVisualStyleBackColor = false;
+            exitBtn.Click += exitBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1262, 673);
+            Controls.Add(exitBtn);
             Controls.Add(progressBar);
             Controls.Add(songTitleLabel);
             Controls.Add(stopBtn);
@@ -149,10 +173,12 @@
             Controls.Add(rewindBtn);
             Controls.Add(pictureBoxAlbum);
             Controls.Add(openFileBtn);
+            DoubleBuffered = true;
             MaximumSize = new Size(1280, 720);
             MinimumSize = new Size(1280, 720);
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             ((System.ComponentModel.ISupportInitialize)pictureBoxAlbum).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -169,5 +195,6 @@
         private Button stopBtn;
         private Label songTitleLabel;
         private ProgressBar progressBar;
+        private Button exitBtn;
     }
 }
