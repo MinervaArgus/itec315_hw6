@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SGoTeHSb6D+2XNOo05TTYZh1p29IAgv/OWzzbCdnxRdbfDGOwHi0jH5UoHBocpT1W/Y2qHCm3qjbXkFS0o0JAQ==",
+  "dgSpecHash": "vYU9rczB1j1fr3PfnpQEdTJoGucqmvRgtBxJ1b2FT3kfX2E1ijZNuV0BrjWPOm+H5e/K6NDhu/lT1eIqW4pFwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\offic\\Documents\\GitHub\\itec345_hw6\\AudioPlayer\\AudioPlayer.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,8 @@
     "C:\\Users\\offic\\.nuget\\packages\\naudio.winmm\\2.1.0\\naudio.winmm.2.1.0.nupkg.sha512",
     "C:\\Users\\offic\\.nuget\\packages\\netcoreaudio\\1.7.0\\netcoreaudio.1.7.0.nupkg.sha512",
     "C:\\Users\\offic\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\offic\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\offic\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\offic\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512"
   ],
   "logs": []
 }
